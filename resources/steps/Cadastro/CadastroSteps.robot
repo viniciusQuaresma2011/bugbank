@@ -5,28 +5,32 @@ Resource    ../../base/Base.robot
 
 *** Variables ***
 #Cadastro
-${saldo_conta}      //*[@id="textBalance"]/span[1]
-${input_email_cadastro}     //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[2]/input[1]
-${input_nome_cadastro}      //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[3]/input[1]
-${input_senha_cadastro}   //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[4]/div[1]/input[1]
-${input_senha_confirmacao_cadastro}     //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[5]/div[1]/input[1]
+${saldo_conta}      css:p#textBalance > span
 
-${botao_cadastrar}      //*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[3]/button[2]
+
+${input_email_cadastro}      css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(2) > .input__default
+${input_nome_cadastro}       css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(3) > .input__default
+${input_senha_cadastro}      css:.login__password:nth-child(4) .input__default
+${input_senha_confirmacao_cadastro}     css:.login__password:nth-child(5) .input__default
+
+
+${botao_cadastrar}        css:.ihdmxA
 ${botao_fechar_card_cadastro}     //*[@id="btnCloseModal"]
-${botao_cadastrar_pg_cadastro}          //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/button[1]
-${botao_sair_conta}     //*[@id="btnExit"]
+${botao_cadastrar_pg_cadastro}          css:.CMabB
+${botao_sair_conta}     css:#btnExit
 
-${mensagem_modal_cadastro}     //*[@id="modalText"]
+${mensagem_modal_cadastro}     css:#modalText
                                                 
-${mensagem_input_email_invalido_cadastro}       //*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/p
-${mensagem_input_senha_invalido_cadastro}       //*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/p
-${mensagem_input_confirmar_senha_invalido_cadastro}       //*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/p
+${mensagem_input_email_invalido_cadastro}       css:div#__next > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div:nth-of-type(2) > p
+${mensagem_input_senha_invalido_cadastro}       css:div#__next > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div:nth-of-type(4) > div > p
+${mensagem_input_confirmar_senha_invalido_cadastro}       css:div#__next > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div:nth-of-type(5) > div > p
 
 
 ${opção_criar_com_saldo}    //*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[6]/label[1]/span[1]
 ${opcao_teste_sap}      //*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label
+                        
 
-${usuario_numero_conta}   //*[@id="textAccountNumber"]/span[1]
+${usuario_numero_conta}   css:p#textAccountNumber > span
 *** Keywords ***
 ###### Keywords para Cadastro
 Dado que estou na Tela de Cadastro do BugBank

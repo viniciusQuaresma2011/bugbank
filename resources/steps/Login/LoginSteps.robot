@@ -19,7 +19,7 @@ ${botao_cadastrar_pg_cadastro}          //*[@id="__next"]/div[1]/div[2]/div[1]/d
 
 ${botao_fechar_card}    //*[@id="btnCloseModal"]
 
-${botao_acessar}    //*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[3]/button[1]
+${botao_acessar}        css:div#__next > div > div:nth-of-type(2) > div > div > form > div:nth-of-type(3) > button
 ${botao_card_erro_login}    //*[@id="btnCloseModal"]
 
 ${verifica_usuario_logado}    //*[@id="textName"]
@@ -29,8 +29,8 @@ ${usuario}             Olá a1,
 ${verifica_mensagem_erro}    //*[@id="login_button_container"]/div[1]/form[1]/div[3]/h3
 ${mensagem_erro}             Epic sadface: Sorry, this user has been locked out.
 
-${mensagem_campo_email_obrigatorio}     //*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/p[1]    
-${mensagem_campo_senha_obrigatorio}     //*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[2]/div[1]/p[1]
+${mensagem_campo_email_obrigatorio}     css:div#__next > div > div:nth-of-type(2) > div > div > form > div > p
+${mensagem_campo_senha_obrigatorio}     css:div#__next > div > div:nth-of-type(2) > div > div > form > div:nth-of-type(2) > div > p
 
 
 

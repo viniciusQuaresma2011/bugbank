@@ -184,7 +184,6 @@ Cenário 2 - Cadastrar sem a opção Criar conta com saldo marcada
     E preencho em cadastro o campo nome com "a1"
     E preencho em cadastro o campo senha com "123456"
     E preencho em cadastro o campo Confirmar senha com "123456"
-    E não marco a opção Criar conta com Saldo
     Quando clico em Cadastrar
     Entao sou cadastrado com sucesso!
     E preencho o campo Email com "a1@gmail.com"

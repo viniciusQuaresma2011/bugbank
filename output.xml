@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20230109 11:04:52.022" rpa="false" schemaversion="2">
+<suite id="s1" name="Transferencia" source="c:\Users\vinicius\Downloads\atividade AUDAX\bugbank\bugbank-master\resources\data\transferencia\transferencia.robot">
+<test id="s1-t1" name="Cenário 1 - Realizar Transferencia de R$ 100,00 para uma conta Válida">
+<kw name="Cadastrar rapido" library="CadastroSteps">
+<arg>conta1@gmail.com</arg>
+<arg>conta1</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230109 11:04:52.535" level="INFO">Opening browser 'Edge' to base url 'https://bugbank.netlify.app/'.</msg>
+<status status="PASS" starttime="20230109 11:04:52.533" endtime="20230109 11:04:58.168"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_cadastrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:58.169" level="INFO">Clicking element 'css:.ihdmxA'.</msg>
+<status status="PASS" starttime="20230109 11:04:58.168" endtime="20230109 11:04:58.255"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_email_cadastro}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:58.262" level="INFO">Typing text 'conta1@gmail.com' into text field 'css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(2) &gt; .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:04:58.259" endtime="20230109 11:04:58.552"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_nome_cadastro}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:58.554" level="INFO">Typing text 'conta1' into text field 'css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(3) &gt; .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:04:58.553" endtime="20230109 11:04:58.755"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha_cadastro}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:58.760" level="INFO">Typing text '123456' into text field 'css:.login__password:nth-child(4) .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:04:58.755" endtime="20230109 11:04:58.938"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha_confirmacao_cadastro}</arg>
+<arg>${confirmar_senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:58.943" level="INFO">Typing text '123456' into text field 'css:.login__password:nth-child(5) .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:04:58.938" endtime="20230109 11:04:59.132"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_cadastrar_pg_cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:59.134" level="INFO">Clicking element 'css:.CMabB'.</msg>
+<status status="PASS" starttime="20230109 11:04:59.133" endtime="20230109 11:04:59.321"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${botao_fechar_card_cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:04:59.321" endtime="20230109 11:04:59.652"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_fechar_card_cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:59.653" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20230109 11:04:59.652" endtime="20230109 11:04:59.717"/>
+</kw>
+<status status="PASS" starttime="20230109 11:04:52.532" endtime="20230109 11:04:59.718"/>
+</kw>
+<kw name="E preencho o campo Email com &quot;conta1@gmail.com&quot;" library="LoginSteps" sourcename="E preencho o campo Email com &quot;${email}&quot;">
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>${input_email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230109 11:04:59.720" endtime="20230109 11:04:59.788"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:04:59.789" level="INFO">Typing text 'conta1@gmail.com' into text field '//*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230109 11:04:59.788" endtime="20230109 11:04:59.990"/>
+</kw>
+<status status="PASS" starttime="20230109 11:04:59.719" endtime="20230109 11:04:59.995"/>
+</kw>
+<kw name="E preencho o campo Senha com &quot;123456&quot;" library="LoginSteps" sourcename="E preencho o campo Senha com &quot;${senha}&quot;">
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>${input_senha}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230109 11:05:00.006" endtime="20230109 11:05:00.116"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.117" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:00.117" endtime="20230109 11:05:00.253"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:00.004" endtime="20230109 11:05:00.253"/>
+</kw>
+<kw name="Quando clico no botao Acessar" library="LoginSteps">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${botao_acessar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:00.256" endtime="20230109 11:05:00.299"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_acessar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.301" level="INFO">Clicking element 'css:div#__next &gt; div &gt; div:nth-of-type(2) &gt; div &gt; div &gt; form &gt; div:nth-of-type(3) &gt; button'.</msg>
+<status status="PASS" starttime="20230109 11:05:00.300" endtime="20230109 11:05:00.402"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:00.254" endtime="20230109 11:05:00.403"/>
+</kw>
+<kw name="Entao consigo entrar no sistema com sucesso com o nome &quot;Olá conta1,&quot;!!!!" library="LoginSteps" sourcename="Entao consigo entrar no sistema com sucesso com o nome ${nome_usuario}!!!">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${verifica_usuario_logado}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:00.412" endtime="20230109 11:05:00.670"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${usuario_logado}</var>
+<arg>${verifica_usuario_logado}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.703" level="INFO">${usuario_logado} = Olá conta1,</msg>
+<status status="PASS" starttime="20230109 11:05:00.671" endtime="20230109 11:05:00.703"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${nome_usuario}</arg>
+<arg>${usuario_logado}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230109 11:05:00.703" endtime="20230109 11:05:00.704"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:00.411" endtime="20230109 11:05:00.704"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${numero_conta}</var>
+<arg>${usuario_numero_conta}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.751" level="INFO">${numero_conta} = 92-3</msg>
+<status status="PASS" starttime="20230109 11:05:00.705" endtime="20230109 11:05:00.753"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numero_conta_sem_digito}</var>
+<arg>"${numero_conta}".split("-")[0]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230109 11:05:00.758" level="INFO">${numero_conta_sem_digito} = 92</msg>
+<status status="PASS" starttime="20230109 11:05:00.755" endtime="20230109 11:05:00.759"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${digito_conta}</var>
+<arg>"${numero_conta}".split("-")[1]</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230109 11:05:00.763" level="INFO">${digito_conta} = 3</msg>
+<status status="PASS" starttime="20230109 11:05:00.762" endtime="20230109 11:05:00.764"/>
+</kw>
+<kw name="Clico para Sair e retornar para o cadastro" library="CadastroSteps">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_sair_conta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.769" level="INFO">Clicking element 'css:#btnExit'.</msg>
+<status status="PASS" starttime="20230109 11:05:00.768" endtime="20230109 11:05:00.899"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:00.766" endtime="20230109 11:05:00.900"/>
+</kw>
+<kw name="Cadastrar rapido Cenario Conta 2" library="CadastroSteps">
+<arg>conta2@gmail.com</arg>
+<arg>conta2</arg>
+<arg>123456</arg>
+<arg>123456</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_cadastrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.906" level="INFO">Clicking element 'css:.ihdmxA'.</msg>
+<status status="PASS" starttime="20230109 11:05:00.905" endtime="20230109 11:05:00.986"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_email_cadastro}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:00.988" level="INFO">Typing text 'conta2@gmail.com' into text field 'css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(2) &gt; .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:05:00.986" endtime="20230109 11:05:01.247"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_nome_cadastro}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.250" level="INFO">Typing text 'conta2' into text field 'css:.style__ContainerFieldInput-sc-s3e9ea-0:nth-child(3) &gt; .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.248" endtime="20230109 11:05:01.431"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha_cadastro}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.434" level="INFO">Typing text '123456' into text field 'css:.login__password:nth-child(4) .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.432" endtime="20230109 11:05:01.631"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha_confirmacao_cadastro}</arg>
+<arg>${confirmar_senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.633" level="INFO">Typing text '123456' into text field 'css:.login__password:nth-child(5) .input__default'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.632" endtime="20230109 11:05:01.799"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${opção_criar_com_saldo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:01.799" endtime="20230109 11:05:01.830"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${opção_criar_com_saldo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.831" level="INFO">Clicking element '//*[@id="__next"]/div[1]/div[2]/div[1]/div[2]/form[1]/div[6]/label[1]/span[1]'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.831" endtime="20230109 11:05:01.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${opcao_teste_sap}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:01.888" endtime="20230109 11:05:01.928"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${opcao_teste_sap}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.929" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.929" endtime="20230109 11:05:01.988"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_cadastrar_pg_cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:01.998" level="INFO">Clicking element 'css:.CMabB'.</msg>
+<status status="PASS" starttime="20230109 11:05:01.996" endtime="20230109 11:05:02.070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${botao_fechar_card_cadastro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:02.070" endtime="20230109 11:05:02.351"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_fechar_card_cadastro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:02.352" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20230109 11:05:02.351" endtime="20230109 11:05:02.426"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:00.903" endtime="20230109 11:05:02.427"/>
+</kw>
+<kw name="E preencho o campo Email com &quot;conta2@gmail.com&quot;" library="LoginSteps" sourcename="E preencho o campo Email com &quot;${email}&quot;">
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>${input_email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230109 11:05:02.436" endtime="20230109 11:05:02.502"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:02.503" level="INFO">Typing text 'conta2@gmail.com' into text field '//*[@id="__next"]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20230109 11:05:02.503" endtime="20230109 11:05:02.670"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:02.435" endtime="20230109 11:05:02.670"/>
+</kw>
+<kw name="E preencho o campo Senha com &quot;123456&quot;" library="LoginSteps" sourcename="E preencho o campo Senha com &quot;${senha}&quot;">
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>${input_senha}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230109 11:05:02.672" endtime="20230109 11:05:02.740"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_senha}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:02.744" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:02.742" endtime="20230109 11:05:02.887"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:02.670" endtime="20230109 11:05:02.887"/>
+</kw>
+<kw name="Quando clico no botao Acessar" library="LoginSteps">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${botao_acessar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:02.889" endtime="20230109 11:05:02.916"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_acessar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:02.918" level="INFO">Clicking element 'css:div#__next &gt; div &gt; div:nth-of-type(2) &gt; div &gt; div &gt; form &gt; div:nth-of-type(3) &gt; button'.</msg>
+<status status="PASS" starttime="20230109 11:05:02.917" endtime="20230109 11:05:03.167"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:02.888" endtime="20230109 11:05:03.168"/>
+</kw>
+<kw name="Entao consigo entrar no sistema com sucesso com o nome &quot;Olá conta2,&quot;!!!!" library="LoginSteps" sourcename="Entao consigo entrar no sistema com sucesso com o nome ${nome_usuario}!!!">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${verifica_usuario_logado}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:03.171" endtime="20230109 11:05:03.218"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${usuario_logado}</var>
+<arg>${verifica_usuario_logado}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:03.257" level="INFO">${usuario_logado} = Olá conta2,</msg>
+<status status="PASS" starttime="20230109 11:05:03.219" endtime="20230109 11:05:03.257"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${nome_usuario}</arg>
+<arg>${usuario_logado}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230109 11:05:03.262" endtime="20230109 11:05:03.263"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.170" endtime="20230109 11:05:03.263"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${saldo_conta}</var>
+<arg>${usuario_saldo_conta}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:03.302" level="INFO">${saldo_conta} = R$ 1.000,00</msg>
+<status status="PASS" starttime="20230109 11:05:03.264" endtime="20230109 11:05:03.302"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${saldo_editado}</var>
+<arg>${saldo_conta}</arg>
+<arg>R$</arg>
+<arg>.</arg>
+<arg>,00</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20230109 11:05:03.304" level="INFO">${saldo_editado} =  1000</msg>
+<status status="PASS" starttime="20230109 11:05:03.303" endtime="20230109 11:05:03.304"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${saldo_editado}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230109 11:05:03.306" level="INFO"> 1000</msg>
+<status status="PASS" starttime="20230109 11:05:03.305" endtime="20230109 11:05:03.306"/>
+</kw>
+<if>
+<branch type="IF" condition="${saldo_editado} &gt;= 100">
+<kw name="E clico em Transferencia" library="TransferenciaSteps">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botao_transferencia}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:03.314" level="INFO">Clicking element '//*[@id="btn-TRANSFERÊNCIA"]/span/img'.</msg>
+<status status="PASS" starttime="20230109 11:05:03.314" endtime="20230109 11:05:03.405"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.313" endtime="20230109 11:05:03.406"/>
+</kw>
+<kw name="E preencho o Numero da conta com o dado &quot;${numero_conta_sem_digito}&quot;" library="TransferenciaSteps" sourcename="E preencho o Numero da conta com o dado &quot;${numero_conta}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${input_numero_conta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:03.412" endtime="20230109 11:05:03.671"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_numero_conta}</arg>
+<arg>${numero_conta}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:03.672" level="INFO">Typing text '92' into text field '//*[@id="__next"]/div/div[3]/form/div[1]/div[1]/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:03.671" endtime="20230109 11:05:03.806"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.411" endtime="20230109 11:05:03.808"/>
+</kw>
+<kw name="E preencho o Digito da conta com o dado &quot;${digito_conta}&quot;" library="TransferenciaSteps" sourcename="E preencho o Digito da conta com o dado &quot;${input_digito}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${input_digito_conta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:03.814" endtime="20230109 11:05:03.845"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_digito_conta}</arg>
+<arg>${input_digito}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:03.848" level="INFO">Typing text '3' into text field '//*[@id="__next"]/div/div[3]/form/div[1]/div[2]/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:03.847" endtime="20230109 11:05:03.961"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.812" endtime="20230109 11:05:03.962"/>
+</kw>
+<kw name="E preencho o Valor da Transferencia com o dado &quot;100&quot;" library="TransferenciaSteps" sourcename="E preencho o Valor da Transferencia com o dado &quot;${valor_transferencia}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${input_valor_transferencia_conta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:03.964" endtime="20230109 11:05:04.001"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_valor_transferencia_conta}</arg>
+<arg>${valor_transferencia}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:04.003" level="INFO">Typing text '100' into text field '//*[@id="__next"]/div/div[3]/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:04.002" endtime="20230109 11:05:04.131"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.963" endtime="20230109 11:05:04.133"/>
+</kw>
+<kw name="E preencho a Descrição com o dado &quot;Transferencia para fulano de tal&quot;" library="TransferenciaSteps" sourcename="E preencho a Descrição com o dado &quot;${descricao_conta}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${input_descricao_conta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:04.135" endtime="20230109 11:05:04.168"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_descricao_conta}</arg>
+<arg>${descricao_conta}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:04.169" level="INFO">Typing text 'Transferencia para fulano de tal' into text field '//*[@id="__next"]/div/div[3]/form/div[3]/input'.</msg>
+<status status="PASS" starttime="20230109 11:05:04.169" endtime="20230109 11:05:04.381"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:04.134" endtime="20230109 11:05:04.381"/>
+</kw>
+<kw name="Quando clico para Transferir" library="TransferenciaSteps">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${botão_transferir}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:04.383" endtime="20230109 11:05:04.419"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${botão_transferir}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:04.420" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/button'.</msg>
+<status status="PASS" starttime="20230109 11:05:04.419" endtime="20230109 11:05:04.490"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:04.382" endtime="20230109 11:05:04.491"/>
+</kw>
+<kw name="Verifico se deu certo a Transferencia entre as contas" library="TransferenciaSteps">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${label_mensagem_conta}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230109 11:05:04.494" endtime="20230109 11:05:04.767"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${mensagem_conta}</var>
+<arg>${label_mensagem_conta}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230109 11:05:04.802" level="INFO">${mensagem_conta} = Transferencia realizada com sucesso</msg>
+<status status="PASS" starttime="20230109 11:05:04.768" endtime="20230109 11:05:04.803"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Transferencia realizada com sucesso</arg>
+<arg>${mensagem_conta}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230109 11:05:04.803" endtime="20230109 11:05:04.804"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:04.492" endtime="20230109 11:05:04.805"/>
+</kw>
+<kw name="Aguardo &quot;5s&quot; segundos" library="CadastroSteps" sourcename="Aguardo &quot;${tempo_sleep}&quot; segundos">
+<kw name="Sleep" library="BuiltIn">
+<arg>${tempo_sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230109 11:05:09.810" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230109 11:05:04.806" endtime="20230109 11:05:09.812"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:04.805" endtime="20230109 11:05:09.813"/>
+</kw>
+<status status="PASS" starttime="20230109 11:05:03.311" endtime="20230109 11:05:09.814"/>
+</branch>
+<branch type="ELSE IF" condition="${saldo_editado} &lt;= 100">
+<kw name="Erro ao Transferir saldo insuficiente" library="TransferenciaSteps">
+<status status="NOT RUN" starttime="20230109 11:05:09.815" endtime="20230109 11:05:09.816"/>
+</kw>
+<status status="NOT RUN" starttime="20230109 11:05:09.814" endtime="20230109 11:05:09.816"/>
+</branch>
+<status status="PASS" starttime="20230109 11:05:03.311" endtime="20230109 11:05:09.817"/>
+</if>
+<status status="PASS" starttime="20230109 11:04:52.530" endtime="20230109 11:05:09.819"/>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230109 11:05:09.834" endtime="20230109 11:05:16.382"/>
+</kw>
+<doc>Testando a pagina Transferencia</doc>
+<status status="PASS" starttime="20230109 11:04:52.029" endtime="20230109 11:05:16.383"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Transferencia">Transferencia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
