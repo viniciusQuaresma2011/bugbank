@@ -5,7 +5,7 @@ LABEL version="latest" maintainer="Raj Tech-Trainer <techtrainerraj@gmail.com>"
 RUN apt-get update
 
 #install python
-RUN apt install -y python3.7
+RUN apt install -y python3.11
 RUN apt install -y python3-pip
 
 #install robotframework and seleniumlibrary
