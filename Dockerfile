@@ -39,14 +39,15 @@ RUN pip install --no-cache-dir \
 COPY run_suite.sh /scripts/run_suite.sh
 COPY resources/base/Base.robot /app/tests/resources/base/Base.robot
 
-COPY resources/data/Carrinho/Carrinho.robot /app/tests/resources/data/Carrinho/Carrinho.robot
+COPY resources/data/Cadastro/Cadastro.robot /app/tests/resources/data/Cadastro/Cadastro.robot
+COPY resources/data/Extrato/Extrato.robot /app/tests/resources/data/Extrato/Extrato.robot
 COPY resources/data/Login/Login.robot /app/tests/resources/data/Login/Login.robot
-COPY resources/data/Produto/Produto.robot /app/tests/resources/data/Produto/Produto.robot
+COPY resources/data/Transferencia/Transferencia.robot /app/tests/resources/data/Transferencia/Transferencia.robot
 
 
-COPY resources/steps/Carrinho/CarrinhoSteps.robot /app/tests/resources/steps/Carrinho/CarrinhoSteps.robot
+COPY resources/steps/Cadastro/CadastroSteps.robot /app/tests/resources/steps/Cadastro/CadastroSteps.robot
 COPY resources/steps/Login/LoginSteps.robot /app/tests/resources/steps/Login/LoginSteps.robot
-COPY resources/steps/Produtos/ProdutosSteps.robot /app/tests/resources/steps/Produtos/ProdutosSteps.robot
+COPY resources/steps/Transferencia/TransferenciaSteps.robot /app/tests/resources/steps/Transferencia/TransferenciaSteps.robot
 
 
 
