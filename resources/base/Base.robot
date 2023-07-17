@@ -12,7 +12,7 @@ ${URL}    https://bugbank.netlify.app/
 *** Keywords ***
 
 Abrir o Browser
-    Open Browser    ${URL}    Edge
+    Open Browser    ${URL}    Firefox
 Fechar o browser
     Close Browser
 
