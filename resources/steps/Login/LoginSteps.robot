@@ -36,7 +36,7 @@ ${mensagem_campo_senha_obrigatorio}     //*[@id="__next"]/div[1]/div[2]/div[1]/d
 
 *** Keywords ***
 Dado que estou na pagina de Login do BugBank
-    Open Browser    ${URL}    Edge
+    Open Browser    ${URL}    Firefox
 
 E preencho o campo Email com "${email}"
     Clear Element Text  ${input_email}
