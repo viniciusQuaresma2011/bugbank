@@ -1,4 +1,7 @@
 # bugbank
+
+![bugbank](https://github.com/viniciusQuaresma2011/bugbank/assets/85623269/a22529b2-6467-4d1b-ba34-76ca7b5ad25a)
+
 Projeto de automação Web realizado em um banco com "bugs" utilizando Robot Framework(Scripts) + Selenium e os Cenários em Gherkin
 
 ATENÇÃO -> Projeto configurado para rodar em Container Docker:D
